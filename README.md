@@ -1,4 +1,7 @@
 # [Confitura 2015](http://tech.viacom.com/warsawsdc/confitura2015/)
+
+## How to run
+```./gradlew clean build```
 ## Superdigit
 
 We define superdigit of an integer x using the following rules:
