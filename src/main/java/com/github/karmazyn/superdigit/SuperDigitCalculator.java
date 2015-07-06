@@ -6,18 +6,9 @@ package com.github.karmazyn.superdigit;
 public class SuperDigitCalculator {
 
     public long calculate(long number) {
-        if(Math.abs(number) < 10) {
+        if(number < 10 && number > -10) {
             return number;
         }
-        long sum = sumDigits(number);
-        return calculate(sum);
-    }
-
-    private long sumDigits(long number) {
-        long sum = 0;
-        for(; Math.abs(number) >= 10; number /= 10) {
-            sum += number % 10;
-        }
-        return sum + number;
+        return calculate(number / 10 + number % 10);
     }
 }

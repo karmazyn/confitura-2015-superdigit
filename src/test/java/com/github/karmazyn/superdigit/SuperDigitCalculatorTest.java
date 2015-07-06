@@ -36,6 +36,12 @@ public class SuperDigitCalculatorTest {
     }
 
     @Test
+    public void shouldCalculateSuperDigitsFromExtrema() {
+     assertThat(calculator.calculate(Long.MAX_VALUE)).isEqualTo(7L);
+     assertThat(calculator.calculate(Long.MIN_VALUE)).isEqualTo(-8L);
+    }
+
+    @Test
     public void shouldPassAC() {
         assertThat(calculator.calculate(98741)).isEqualTo(2);
     }
