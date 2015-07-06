@@ -13,32 +13,32 @@ public class SuperDigitCalculatorTest {
 
     @Test
     public void shouldReturnSameNumberAsInput() {
-        assertThat(calculator.calculate(0L)).isEqualTo(0L);
-        assertThat(calculator.calculate(1L)).isEqualTo(1L);
-        assertThat(calculator.calculate(-1L)).isEqualTo(-1L);
+        assertThat(calculator.calculate(0)).isEqualTo(0);
+        assertThat(calculator.calculate(1)).isEqualTo(1);
+        assertThat(calculator.calculate(-1)).isEqualTo(-1);
     }
 
     @Test
     public void shouldAddTwoDigitsTogether() {
-        assertThat(calculator.calculate(10L)).isEqualTo(1L);
-        assertThat(calculator.calculate(-10L)).isEqualTo(-1L);
+        assertThat(calculator.calculate(10)).isEqualTo(1);
+        assertThat(calculator.calculate(-10)).isEqualTo(-1);
     }
 
     @Test
     public void shouldAddTwoDigitsTogetherTwice() {
-        assertThat(calculator.calculate(92L)).isEqualTo(2L);
-        assertThat(calculator.calculate(-92L)).isEqualTo(-2L);
+        assertThat(calculator.calculate(92)).isEqualTo(2);
+        assertThat(calculator.calculate(-92)).isEqualTo(-2);
     }
 
     @Test
     public void shouldAddThreeDigitsTogether() {
-        assertThat(calculator.calculate(111L)).isEqualTo(3L);
+        assertThat(calculator.calculate(111)).isEqualTo(3);
     }
 
     @Test
     public void shouldCalculateSuperDigitsFromExtrema() {
-     assertThat(calculator.calculate(Long.MAX_VALUE)).isEqualTo(7L);
-     assertThat(calculator.calculate(Long.MIN_VALUE)).isEqualTo(-8L);
+     assertThat(calculator.calculate(Integer.MAX_VALUE)).isEqualTo(1);
+     assertThat(calculator.calculate(Integer.MIN_VALUE)).isEqualTo(-2);
     }
 
     @Test

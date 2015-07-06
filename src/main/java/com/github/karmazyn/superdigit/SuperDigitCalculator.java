@@ -5,7 +5,7 @@ package com.github.karmazyn.superdigit;
  */
 public class SuperDigitCalculator {
 
-    public long calculate(long number) {
+    public int calculate(int number) {
         if(number < 10 && number > -10) {
             return number;
         }
